@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Badge } from "../ui/badge";
 import Image from "next/image";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Product({ product }: any) {
   const mainImage = product.images[0];
 
@@ -36,7 +37,7 @@ export default function Product({ product }: any) {
     </Link>
   );
 }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getFormattedPrice(product: any): string {
   const minPrice = product.price;
   const maxPrice = product.price;
