@@ -27,9 +27,7 @@ export async function generateMetadata({ params }: any) {
   };
 }
 
-export default async function ProductDetailPage({
-  params,
-}: ProductDetailPageProps) {
+export default async function ProductDetailPage({ params }: any) {
   const product = await fetchProduct(params.id);
 
   if (!product) {
