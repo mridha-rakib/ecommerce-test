@@ -2,13 +2,7 @@ import ProductDetail from "@/components/products/ProductDetail";
 import { fetchProduct } from "@/lib/api/products";
 import { notFound } from "next/navigation";
 
-type ProductDetailPageProps = {
-  params: {
-    id: string;
-  };
-};
-
-export async function generateMetadata({ params }: ProductDetailPageProps) {
+export async function generateMetadata({ params }: any) {
   const product = await fetchProduct(params.id);
 
   if (!product) {
