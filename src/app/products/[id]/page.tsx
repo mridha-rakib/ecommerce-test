@@ -2,11 +2,11 @@ import ProductDetail from "@/components/products/ProductDetail";
 import { fetchProduct } from "@/lib/api/products";
 import { notFound } from "next/navigation";
 
-interface ProductDetailPageProps {
+type ProductDetailPageProps = {
   params: {
     id: string;
   };
-}
+};
 
 export async function generateMetadata({ params }: ProductDetailPageProps) {
   const product = await fetchProduct(params.id);
